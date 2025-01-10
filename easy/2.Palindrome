@@ -1,0 +1,14 @@
+func isPalindrome(x int) bool {
+
+    str := strconv.Itoa(x)
+    runes := []rune(str)
+
+    // Compare characters from both ends of the string
+    for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+        if runes[i] != runes[j] {
+            return false // Return false if characters don't match
+        }
+    }
+
+    return true 
+}
